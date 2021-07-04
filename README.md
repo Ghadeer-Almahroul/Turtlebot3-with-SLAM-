@@ -1,9 +1,9 @@
 # Turtlebot3-with-SLAM
 Use Turtlebot3 with SLAM approach to create and save a map.
 http://turtlebot3.robotis.com/
-
+***
 ### **PC Setup**
-
+***
 **1- Download and Install Ubuntu on PC**
 
 **2- Install ROS 1 on Remote PC**
@@ -68,9 +68,9 @@ Modify the address of localhost in the ROS_MASTER_URI and ROS_HOSTNAME with the 
 * Source the bashrc with below command.
 
 `$ source ~/.bashrc`
-
+***
 ### Gazebo Simulation
-
+***
 **1- Install Simulation Package**
 
 `$ cd ~/catkin_ws/src/`
@@ -102,9 +102,9 @@ Modify the address of localhost in the ROS_MASTER_URI and ROS_HOSTNAME with the 
 **3- Operate TurtleBot3**
 
 `$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
-
+***
 ### SLAM Simulation
-
+***
 **1- Launch Simulation World**
 
 In this instruction, TurtleBot3 World will be used.
