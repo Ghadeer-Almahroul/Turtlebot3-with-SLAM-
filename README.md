@@ -54,17 +54,17 @@ In case of TurtleBot3 Waffle Pi
 
 **6- Network Configuration**
 
-1- Connect PC to a WiFi device and find the assigned IP address with the command below.
+*  Connect PC to a WiFi device and find the assigned IP address with the command below.
 
 `$ ifconfig`
 
-2- Open the file and update the ROS IP settings with the command below.
+*  Open the file and update the ROS IP settings with the command below.
 
 `$ nano ~/.bashrc`
 
-3- Press Ctrl+END or Alt+/ to move the cursor to the end of line.
+*  Press Ctrl+END or Alt+/ to move the cursor to the end of line.
 Modify the address of localhost in the ROS_MASTER_URI and ROS_HOSTNAME with the IP address acquired from the above terminal window.
 
-4- Source the bashrc with below command
+* Source the bashrc with below command.
 
 `$ source ~/.bashrc`
