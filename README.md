@@ -68,3 +68,38 @@ Modify the address of localhost in the ROS_MASTER_URI and ROS_HOSTNAME with the 
 * Source the bashrc with below command.
 
 `$ source ~/.bashrc`
+
+### Gazebo Simulation
+
+**1- Install Simulation Package**
+
+`$ cd ~/catkin_ws/src/`
+
+`$ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
+
+`$ cd ~/catkin_ws && catkin_make`
+
+**2- Launch Simulation World**
+
+* Empty World
+
+`$ export TURTLEBOT3_MODEL=burger`
+
+`$ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch`
+
+* TurtleBot3 World
+
+`$ export TURTLEBOT3_MODEL=waffle`
+
+`$ roslaunch turtlebot3_gazebo turtlebot3_world.launch`
+
+* TurtleBot3 House
+
+`$ export TURTLEBOT3_MODEL=waffle_pi`
+
+`$ roslaunch turtlebot3_gazebo turtlebot3_house.launch`
+
+
+**3- Operate TurtleBot3**
+
+`$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
