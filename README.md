@@ -99,7 +99,41 @@ Modify the address of localhost in the ROS_MASTER_URI and ROS_HOSTNAME with the 
 
 `$ roslaunch turtlebot3_gazebo turtlebot3_house.launch`
 
-
 **3- Operate TurtleBot3**
 
 `$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
+
+### SLAM Simulation
+
+**1- Launch Simulation World**
+
+In this instruction, TurtleBot3 World will be used.
+Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3_MODEL parameter.
+
+`$ export TURTLEBOT3_MODEL=burger`
+
+`$ roslaunch turtlebot3_gazebo turtlebot3_world.launch`
+
+**2- Run SLAM Node**
+
+Open a new terminal from Remote PC with Ctrl + Alt + T and run the SLAM node. Gmapping SLAM method is used by default.
+Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3_MODEL parameter.
+
+`$ export TURTLEBOT3_MODEL=burger`
+
+`$ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping`
+
+**3- Run Teleoperation Node**
+
+Open a new terminal from Remote PC with Ctrl + Alt + T and run the teleoperation node from the Remote PC.
+Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3_MODEL parameter.
+
+`$ export TURTLEBOT3_MODEL=burger`
+
+`$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
+
+**4- Save Map**
+
+When the map is created successfully, open a new terminal from Remote PC with Ctrl + Alt + T and save the map.
+
+`$ rosrun map_server map_saver -f ~/map`
